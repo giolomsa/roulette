@@ -58,7 +58,7 @@ class BetController extends Controller
         // Define Current user
         $currentUser = User::find(Auth::user()->id);
 
-        //Check if user enough balance for bet
+        //Check if user has enough balance for bet
         if($currentUser->balance < $amount){
             //redirect back with error
             return Redirect::back()->withErrors(['balance' => 'You do not have enough balance to make this bet.']);

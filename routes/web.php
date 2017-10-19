@@ -26,3 +26,4 @@ Route::post('/savebet', 'BetController@savebet')->name('savebet');
 Route::get('/history', 'BetController@BetHistory')->name('gameHistory');
 Route::get('/gameresult/{id}', 'BetController@gameresult')->name('gameresult');
 Route::get('/getjackpot', 'HomeController@getjackpot')->name('getjackpot');
+

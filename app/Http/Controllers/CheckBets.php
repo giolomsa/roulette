@@ -19,7 +19,7 @@ class CheckBets extends Controller
     private static $BOARD_ROW3 = array(3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36);
 
     private static $BOARD_TWELVE1 = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
-    //changed $BBOARD_TWELVE2->$BOARD_TWELVE2
+    // Changed :: was -> $BBOARD_TWELVE2->$BOARD_TWELVE2
     private static $BOARD_TWELVE2 = array(13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24);
     private static $BOARD_TWELVE3 = array(25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36);
 
@@ -232,8 +232,7 @@ class CheckBets extends Controller
                                 $win2 = $bc * 2;
                             break;
                         case 2:
-                            // Changed
-                            // if (in_array(CheckBets::$BOARD_HALF2, $winnum))
+                            // Changed :: was -> if (in_array(CheckBets::$BOARD_HALF2, $winnum))
                             if (in_array($winnum , CheckBets::$BOARD_HALF2 ))
                                 $win2 = $bc * 2;
                             break;

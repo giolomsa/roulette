@@ -126,6 +126,9 @@ $userBalance = \Illuminate\Support\Facades\Auth::user()->balance;
         </div>
     </div>
 
+@section('footer')
+    @endsection
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 

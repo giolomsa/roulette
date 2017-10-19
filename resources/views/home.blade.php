@@ -4,40 +4,37 @@
 @endsection
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 col-lg-12 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 ">
 
-                    <h2>Current Jackpot <span id="jackpot">{{$jackpot->_value}} </span> Cents</h2>
-                    <h4>Your Balance {{$balance}} Cents</h4>
-
+                <h2>Current Jackpot <span id="jackpot">{{$jackpot->_value}} </span> Cents</h2>
+                <h4>Your Balance {{$balance}} Cents</h4>
             </div>
         </div>
     </div>
-</div>
+    </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function(){
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
 
-        var baseurl = {!! json_encode(url('/')) !!};
+            var baseurl = {!! json_encode(url('/')) !!};
 
-        var fullurl =  baseurl + "/roulette/getjackpot/";
+            var fullurl = baseurl + "/roulette/getjackpot/";
 
-        $(document).ready(function(){
+            $(document).ready(function () {
 
-            setInterval(function(){
+                setInterval(function () {
 
-                $.post(fullurl,
-                    {
+                    $.post(fullurl,
+                        {},
+                        function (data) {
+                            document.getElementById("jackpot").innerHTML = data;
+                        });
 
-                    },
-                    function(data){
-                    document.getElementById("jackpot").innerHTML = data;
-                    });
-
-            }, 1000);
+                }, 1000);
+            });
         });
-    });
-</script>
+    </script>
 @endsection

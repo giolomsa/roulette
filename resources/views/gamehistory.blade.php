@@ -18,16 +18,18 @@
 
                 <tbody>
                 @foreach($games as $game)
-                <tr>
-                    <td>{{$game->id}}</td>
-                    <td>{{$game->betamount}}</td>
-                    <td>{{$game->winamount}}</td>
-                    <td>{{$game->created_at}}</td>
-                </tr>
+                    <tr>
+                        <td>{{$game->id}}</td>
+                        <td>{{$game->betamount}}</td>
+                        <td>{{$game->winamount}}</td>
+                        <td>{{$game->created_at}}</td>
+                    </tr>
                 @endforeach
                 </tbody>
                 <tfoot>
-                <tr><td colspan="4" class="text-center">{{$games->links()}}</td></tr>
+                <tr>
+                    <td colspan="4" class="text-center">{{$games->links()}}</td>
+                </tr>
                 </tfoot>
 
             </table>
